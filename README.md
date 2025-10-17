@@ -1,16 +1,50 @@
-# React + Vite
+# 🛒 Smart Grocery Planner
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Smart Grocery Planner is a simple and smart web app built with **React + Vite** that helps you manage your grocery shopping efficiently.  
+You can plan your purchases, track your available amount, move bought items to archive, and manage your wishlist easily.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+- 💰 **Amount Management** – Edit and save your current amount directly from the dashboard.
+- 🧾 **Shopping List** – Add new products with their prices, buy them, or delete them.
+- 📦 **Archive** – Automatically moves purchased items to archive for record keeping.
+- 📊 **Dashboard Overview** – Displays current balance, total purchased items, and wishlist count.
+- 💾 **Local Database** – Uses a simple local database (IndexedDB) for data persistence.
+- ⚡ Built with **React + Vite** for fast development and performance.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🧠 Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Technology   | Description           |
+| ------------ | --------------------- |
+| React        | Frontend framework    |
+| Vite         | Fast build tool       |
+| IndexedDB    | Local data storage    |
+| Context API  | State management      |
+| React Router | Routing between pages |
+
+---
+
+## 🧩 Pages
+
+- `/` → **Dashboard**: Overview of your data.
+- `/shopinglist` → Manage your shopping list.
+- `/archive` → See previously purchased items.
+
+---
+
+## 🖥️ Live Demo
+
+🔗 [Click here to view the website](https://seifbenouna.github.io/grocery-planner/)
+
+---
+
+## ⚙️ Setup Locally
+
+1. Clone the repository
+   ```bash
+   git clone https://github.com/seifbenouna/grocery-planner.git
+   ```

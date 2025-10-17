@@ -15,7 +15,7 @@ function App() {
       <AmountProvider>
         <ArchiveProvider>
           <ShopingProvider>
-            <BrowserRouter>
+            <BrowserRouter basename="/grocery-planner">
               <Routes>
                 <Route path="/" element={<MainLayout />}>
                   <Route index element={<Dashboard />} />
