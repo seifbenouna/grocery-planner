@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+.container {
+  margin: 10px;
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid lightgray;
+}
+.header {
+  font-weight: bold;
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.header .logo {
+  width: 80px;
+  height: 80px;
+  background-color: aquamarine;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header nav ul {
+  margin: 0;
+  padding: 0;
+  border-radius: 15px;
+  background-color: #eee;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header nav ul li a {
+  display: block;
+  text-decoration: none;
+  padding: 15px 30px;
+  color: #000;
+  border-radius: 15px;
+}
+.header nav ul li a.active {
+  color: #eee;
+  background-color: #828282;
+}
+.header nav ul a:hover {
+  background-color: #828282;
+  color: #eee;
+  cursor: pointer;
+}
+.card {
+  margin: 10px 20px;
+  background-color: #4282bd;
+  width: 200px;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  text-align: center;
+}
+.itemlist .card .redcross {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgb(230, 67, 121);
+  position: absolute;
+  top: 2px;
+  left: calc(200px - 22px);
+  cursor: pointer;
+}
+.itemlist .card h3 {
+  text-transform: uppercase;
+  text-align: center;
+}
+.itemlist .card .redcross::before,
+.itemlist .card .redcross::after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 1px;
+  width: 18px;
+  height: 3px;
+  border-radius: 5px;
+  background-color: white;
+}
+.itemlist .card .redcross::before {
+  transform: rotate(45deg);
+}
+.itemlist .card .redcross::after {
+  transform: rotate(-45deg);
+}
+.itemlist .card .redcross:hover {
+  background-color: white;
+}
+.itemlist .card .redcross:hover::before,
+.itemlist .card .redcross:hover::after {
+  background-color: red;
+}
+.itemlist .card button {
+  margin: 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+.itemlist .card button:hover {
+  background-color: white;
+  color: #4caf50;
+}
+/* styles/App.css */
+
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  flex-shrink: 0;
+  background-color: #242424;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+}
+
+.page-content {
+  flex-grow: 1;
+  background-color: #f9f9f9;
+  padding: 2rem;
+  overflow-y: auto;
+}
