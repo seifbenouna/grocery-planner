@@ -17,7 +17,7 @@ const NavBar = () => {
     <nav>
       <ul>
         <li>
-          <NavLink to="." end>
+          <NavLink to="/grocery-planner" end>
             Dashboard
           </NavLink>
         </li>

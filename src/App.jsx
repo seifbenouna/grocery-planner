@@ -11,7 +11,7 @@ import "./styles/App.css";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/grocery-planner",
     element: <MainLayout />,
     children: [
       { index: true, element: <Dashboard /> },
