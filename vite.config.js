@@ -3,6 +3,8 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig(({ command }) => ({
   base: command === "build" ? "/grocery-planner/" : "/",
-  // base: "/grocery-planner/",
   plugins: [react()],
+  build: {
+    outDir: "dist",
+  },
 }));
