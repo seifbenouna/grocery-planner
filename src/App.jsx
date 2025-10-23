@@ -1,4 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router";
+import { archiveLoader, dashboardLoader } from "./db/dataLoad";
 import ShopingList from "./pages/ShopingList";
 import Dashboard from "./pages/Dashboard";
 import Archive from "./pages/Archive";
@@ -13,10 +14,12 @@ const router = createBrowserRouter([
   {
     path: "/grocery-planner",
     element: <MainLayout />,
+    HydrateFallback: () => <div>Loading...</div>,
+    errorElement: <p>Error loading page</p>,
     children: [
-      { index: true, element: <Dashboard /> },
+      { index: true, element: <Dashboard />, loader: dashboardLoader },
       { path: "shopinglist", element: <ShopingList /> },
-      { path: "archive", element: <Archive /> },
+      { path: "archive", element: <Archive />, loader: archiveLoader },
       { path: "*", element: <NotFound /> },
     ],
   },

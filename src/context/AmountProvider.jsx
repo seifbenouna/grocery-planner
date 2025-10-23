@@ -14,16 +14,12 @@ export const AmountProvider = ({ children }) => {
   }, []);
 
   useEffect(() => {
-    console.log("amount or loaded change", amount, loaded);
-
     if (loaded) setAmountDB(amount);
   }, [amount, loaded]);
 
-  return loaded ? (
+  return (
     <AmountContext.Provider value={{ amount, setAmount }}>
       {children}
     </AmountContext.Provider>
-  ) : (
-    <div>Loading...</div>
   );
 };

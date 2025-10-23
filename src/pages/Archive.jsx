@@ -9,18 +9,13 @@ const Archive = () => {
   return (
     <div className="itemlist">
       {archiveProducts.map((item) => (
-        <Card
-          key={item.id}
-          item={item}
-          children={
-            <p>
-              {item.hour}
-              <br />
-              {item.date}
-            </p>
-          }
-          onDelete={onDelete}
-        />
+        <Card key={item.id} item={item} onDelete={onDelete}>
+          <p>
+            {item.hour}
+            <br />
+            {item.date}
+          </p>
+        </Card>
       ))}
     </div>
   );
