@@ -17,6 +17,11 @@
   position: sticky;
   top: 0;
   z-index: 100;
+  /* flex-shrink: 0; */
+  background-color: #242424;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 20px;
 }
 .header .logo {
   width: 80px;
@@ -118,25 +123,15 @@
   background-color: white;
   color: #4caf50;
 }
-/* styles/App.css */
-
 .main-layout {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-.header {
-  flex-shrink: 0;
-  background-color: #242424;
-  color: white;
-  padding: 1rem 2rem;
-  border-radius: 10px;
-}
-
 .page-content {
   flex-grow: 1;
   background-color: #f9f9f9;
-  padding: 2rem;
+  padding: 20px;
   overflow-y: auto;
 }

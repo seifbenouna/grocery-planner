@@ -1,3 +1,4 @@
+import { createBrowserRouter, RouterProvider } from "react-router";
 import ShopingList from "./pages/ShopingList";
 import Dashboard from "./pages/Dashboard";
 import Archive from "./pages/Archive";
@@ -5,9 +6,21 @@ import NotFound from "./pages/NotFound";
 import MainLayout from "./pages/MainLayout";
 import { ArchiveProvider } from "./context/ArchiveProvider";
 import { ShopingProvider } from "./context/ShopingProvider";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AmountProvider } from "./context/AmountProvider";
 import "./styles/App.css";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <MainLayout />,
+    children: [
+      { index: true, element: <Dashboard /> },
+      { path: "shopinglist", element: <ShopingList /> },
+      { path: "archive", element: <Archive /> },
+      { path: "*", element: <NotFound /> },
+    ],
+  },
+]);
 
 function App() {
   return (
@@ -15,16 +28,7 @@ function App() {
       <AmountProvider>
         <ArchiveProvider>
           <ShopingProvider>
-            <BrowserRouter basename="/grocery-planner">
-              <Routes>
-                <Route path="/" element={<MainLayout />}>
-                  <Route index element={<Dashboard />} />
-                  <Route path="/shopinglist" element={<ShopingList />} />
-                  <Route path="/archive" element={<Archive />} />
-                  <Route path="*" element={<NotFound />} />
-                </Route>
-              </Routes>
-            </BrowserRouter>
+            <RouterProvider router={router} />
           </ShopingProvider>
         </ArchiveProvider>
       </AmountProvider>
